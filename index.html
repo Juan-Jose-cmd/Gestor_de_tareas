@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Mi Gestor de Tareas</h1>
+        
+        
+        <div class="formulario">
+            <input type="text" id="inputTarea" placeholder="Descripción de la tarea...">
+            <select id="selectPrioridad">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+            <button onclick="agregarTareaDesdeUI()"> Agregar</button>
+        </div>
 
+        
+        <div class="filtros">
+            <button onclick="filtrarYMostrar('todas')">Todas</button>
+            <button onclick="filtrarYMostrar('pendiente')">Pendientes</button>
+            <button onclick="filtrarYMostrar('completada')">Completadas</button>
+        </div>
+
+        
+        <div id="listaTareas" class="lista-tareas">
+            
+        </div>
+
+        
+        <div id="estadisticas" class="estadisticas">
+            
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
