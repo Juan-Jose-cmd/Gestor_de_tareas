@@ -164,6 +164,11 @@ document.addEventListener('DOMContentLoaded', function() {
     actualizarEstadisticas();
 });
 
+
+
+
+
+/*
 async function addTask(descripcion, prioridad) {
     const id = crearId();
     const fecha = new Date().toISOString();
@@ -171,7 +176,7 @@ async function addTask(descripcion, prioridad) {
     // CREAR OBJETO TAREA
     let tareaNueva = new Tareas(id, descripcion, prioridad);
     
-    // 🔽 CÓDIGO PARA GUARDAR EN GOOGLE SHEETS
+    //CÓDIGO PARA GUARDAR EN GOOGLE SHEETS
     try {
         await guardarTareaEnSheets(tareaNueva);
         tareas.push(tareaNueva); // Mantener en memoria también
