@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../semaforo/reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav_bar">
+            <!-- 
+            aria-label: Describe qué hace el botón para lectores de pantalla
+            tabindex="0": Hace que sea focusable con teclado
+            -->
+            <button 
+                class="profile-btn"
+                aria-label="Menu de perfil de Juan Pereyra"
+                role="button"
+                tabindex="0"
+                data-state="online"
+                >
+                <span class="initials">JP</span>
+            <span class="status-indicator"></span>
+        </button>
+        </nav>
+    </header>
+    <script src="app.js"></script>
+</body>
+</html>

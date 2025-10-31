@@ -1,0 +1,55 @@
+#container{
+    height: 100vh;
+    width: 100%;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.semaforo{
+    width: 30vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: #000 solid 1px;
+    border-radius: 10px;
+}
+
+.foco{
+    width: 10vw;
+    height: 10vh;
+    border: #000 solid 1px;
+    border-radius: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.luz{
+    height: 102%;
+    width: 102%;
+    border-radius: 100%;
+    box-shadow: 5px 5px 10px #000;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+
+
+.luz.activa {
+    opacity: 1;
+}
+
+.rojo{
+    background-color: #f00;
+}
+.amarillo{
+    background-color: #ff0;
+}
+.verde{
+    background-color: #0f0;
+}
+
