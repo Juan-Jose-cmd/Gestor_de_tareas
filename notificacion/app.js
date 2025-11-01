@@ -139,17 +139,19 @@ class NotificationSystem {
     
     // Así funciona la magia:
     markAllAsRead() {
-        // 1. Busca todas las notificaciones con clase 'unread'
-        const allUnreadItems = document.querySelectorAll('.notification-item.unread');
+    console.log("📝 Marcando todas como leídas...");
     
-        // 2. A cada una le REMUEVE la clase 'unread'
-        allUnreadItems.forEach(item => {
-            item.classList.remove('unread'); // ← Esto cambia el estilo visual
-        });
+    // Actualizar los datos
+    this.notifications.forEach(notification => {
+        notification.unread = false;
+    });
     
-        // 3. Actualiza el contador
-        this.updateBadge(); // ← Esto actualiza el número rojo
-    }
+    // Re-renderizar
+    this.renderNotifications();
+    
+    // Cerrar el dropdown
+    this.closeDropdown();
+}
 
     updateBadge() {
     const remainingUnread = document.querySelectorAll('.notification-item.unread').length;
