@@ -50,7 +50,7 @@ class NotificationSystem {
         this.init();
     }
     
-    init() {
+init() {
         console.log("🎯 INICIANDO EVENT LISTENERS...");
         
         // Verificar cada elemento antes de agregar event listeners
@@ -107,7 +107,7 @@ class NotificationSystem {
         console.log("🚀 Sistema de notificaciones en tiempo real ACTIVADO");
     }
 
-    setupIndividualClicks() {
+setupIndividualClicks() {
     const allNotificationItems = document.querySelectorAll('.notification-item');
     
     allNotificationItems.forEach(item => {
@@ -127,7 +127,7 @@ class NotificationSystem {
     });
 }
     
-    toggleDropdown() {
+toggleDropdown() {
         console.log("🔄 Toggleando dropdown...");
         this.dropdown.classList.toggle('show');
         console.log("Dropdown tiene clase 'show':", this.dropdown.classList.contains('show'));
@@ -138,7 +138,7 @@ class NotificationSystem {
     }
     
     // Así funciona la magia:
-    markAllAsRead() {
+markAllAsRead() {
     console.log("📝 Marcando todas como leídas...");
     
     // Actualizar los datos
@@ -153,7 +153,7 @@ class NotificationSystem {
     this.closeDropdown();
 }
 
-    updateBadge() {
+updateBadge() {
     const remainingUnread = document.querySelectorAll('.notification-item.unread').length;
     console.log(`🔢 Notificaciones no leídas restantes: ${remainingUnread}`);
     
@@ -200,6 +200,64 @@ renderNotifications() {
     this.updateBadge();
 }
 
+// AGREGA ESTE MÉTODO:
+simulateNewNotification() {
+    // Tipos posibles de notificaciones
+    const notificationTypes = [
+        {
+            type: 'message',
+            title: 'Nuevo mensaje',
+            templates: [
+                'tienes un nuevo mensaje en el canal #general',
+                'te mencionó en el proyecto Beta',
+                'respondió tu comentario en el diseño'
+            ]
+        },
+        {
+            type: 'task', 
+            title: 'Tarea actualizada',
+            templates: [
+                'se completó la tarea "Revisar UI"',
+                'hay una nueva tarea asignada para ti',
+                'se venció la tarea "Entregar mockups"'
+            ]
+        },
+        {
+            type: 'system',
+            title: 'Actualización del sistema',
+            templates: [
+                'nueva versión disponible',
+                'mantenimiento programado para esta noche',
+                'nuevas features agregadas'
+            ]
+        }
+    ];
+    
+    // Elegir un tipo aleatorio
+    const randomType = notificationTypes[Math.floor(Math.random() * notificationTypes.length)];
+    const randomTemplate = randomType.templates[Math.floor(Math.random() * randomType.templates.length)];
+    
+    // Crear nueva notificación
+    const newNotification = {
+        id: this.nextId++,
+        type: randomType.type,
+        title: randomType.title,
+        content: randomTemplate,
+        time: 'Ahora mismo',
+        unread: true
+    };
+    
+    // Agregar al principio del array (las más nuevas primero)
+    this.notifications.unshift(newNotification);
+    
+    // Re-renderizar
+    this.renderNotifications();
+    
+    // Efecto especial: hacer vibrar el badge
+    this.animateNewNotification();
+    
+    console.log(`🔔 Nueva notificación: ${newNotification.title} - ${newNotification.content}`);
+}
 
 animateNewNotification() {
     // Efecto de vibración en el badge
