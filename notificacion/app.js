@@ -131,11 +131,11 @@ toggleDropdown() {
         console.log("🔄 Toggleando dropdown...");
         this.dropdown.classList.toggle('show');
         console.log("Dropdown tiene clase 'show':", this.dropdown.classList.contains('show'));
-    }
+}
     
-    closeDropdown() {
+closeDropdown() {
         this.dropdown.classList.remove('show');
-    }
+}
     
     // Así funciona la magia:
 markAllAsRead() {
