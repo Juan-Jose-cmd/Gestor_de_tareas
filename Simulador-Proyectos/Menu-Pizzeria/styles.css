@@ -1,0 +1,386 @@
+:root {
+    --rojo-pizza: #C41E3A;
+    --rojo-tomate: #DC143C;
+    --amarillo-queso: #FFD700;
+    --verde-albahaca: #228B22;
+    --marron-madera: #8B4513;
+    --beige-masa: #F5F5DC;
+    --blanco-harina: #FFF8DC;
+    --negro-carbon: #2F2F2F;
+}
+
+body{
+    background-image: url('https://lh3.googleusercontent.com/ci/AL18g_R15u8wSfjyNnt18w1RQXfWYyzHqnYJEItJRPTYFMPtAKtQCU8F52yvFd1kMujQrV8HmmZXkLZJ=s1200');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--rojo-pizza);
+    color: var(--blanco-harina);
+    padding: 6px 0;
+}
+
+#logo{
+    border-radius: 50%;
+    width: 100px;
+}
+
+nav{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+nav ul li{
+    font-size: 1.2rem;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.espacio{
+    height: 30vh;
+    background-color: transparent;
+}
+
+#sobre-nosotros{
+    background-color: var(--beige-masa);
+    color: var(--negro-carbon);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 6px;
+}
+
+#bar{
+    height: 20vh;
+    width: 90%;
+    background-image: url('https://i.pinimg.com/originals/0c/8c/1e/0c8c1e397197a3ce0d2e6c03e4072bdd.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.title{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+p{
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+#section-menu{
+    background-color: var(--beige-masa);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.card-menu{
+    background: linear-gradient(45deg, 
+            #8B4513 0%, 
+            #A0522D 25%, 
+            #CD853F 50%, 
+            #DEB887 75%, 
+            #D2B48C 100%),
+            /* Textura de vetas de madera */
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(0,0,0,0.1) 3px,
+            rgba(0,0,0,0.1) 4px
+        ),
+        
+        /* Textura adicional para profundidad */
+        radial-gradient(
+            circle at 30% 70%,
+            rgba(139, 69, 19, 0.3) 0%,
+            transparent 20%
+        );
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-menu h2{
+    color: var(--beige-masa);
+}
+
+.card-menu p{
+    color: var(--amarillo-queso);
+}
+
+.card-menu ul{
+    color: var(--beige-masa);
+}
+
+#contacto{
+    background-color: var(--beige-masa);
+    color: var(--negro-carbon);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 6px;
+}
+
+footer{
+    background-color: var(--rojo-pizza);
+    color: var(--beige-masa);
+    padding: 3vh;
+    text-align: center;
+}
+
+footer p{
+    font-size: 1rem;
+}
+
+/* ===== TABLETS (768px en adelante) ===== */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    
+    .container-logo {
+        flex: 0 0 auto;
+    }
+    
+    nav {
+        width: auto;
+        flex: 1;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .espacio {
+        height: 25vh;
+    }
+    
+    #section-menu {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .card-menu {
+        padding: 20px;
+    }
+    
+    .container-contacto {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    .section-horarios,
+    .section-ubicacion {
+        flex: 1;
+        text-align: center;
+    }
+    
+    #bar {
+        height: 25vh;
+    }
+}
+
+/* ===== PORTÁTILES (1024px en adelante) ===== */
+@media (min-width: 1024px) {
+    header {
+        padding: 15px 40px;
+    }
+    
+    #logo {
+        width: 120px;
+    }
+    
+    nav ul {
+        gap: 50px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul li {
+        font-size: 1.3rem;
+    }
+    
+    .espacio {
+        height: 30vh;
+    }
+    
+    #section-menu {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 30px;
+    }
+    
+    .card-menu {
+        padding: 25px;
+    }
+    
+    #sobre-nosotros,
+    #contacto {
+        padding: 20px 0;
+    }
+    
+    #bar {
+        height: 30vh;
+        width: 80%;
+    }
+    
+    .container-contacto {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* ===== ESCRITORIOS GRANDES (1200px en adelante) ===== */
+@media (min-width: 1200px) {
+    header {
+        padding: 20px 60px;
+    }
+    
+    #logo {
+        width: 140px;
+    }
+    
+    nav ul {
+        gap: 70px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+    
+    #section-menu {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .card-menu {
+        padding: 30px;
+    }
+    
+    .espacio {
+        height: 35vh;
+    }
+    
+    #bar {
+        height: 35vh;
+        width: 70%;
+        max-width: 1000px;
+    }
+    
+    .container-contacto {
+        max-width: 1400px;
+    }
+    
+    .section-horarios,
+    .section-ubicacion {
+        flex: 0 0 45%;
+    }
+}
+
+/* ===== ESCRITORIOS MUY GRANDES (1400px en adelante) ===== */
+@media (min-width: 1400px) {
+    #section-menu {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    header {
+        padding: 20px 80px;
+    }
+    
+    .container-contacto {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1600px;
+    }
+}
+
+/* ===== MEJORAS DE ACCESIBILIDAD Y RENDIMIENTO ===== */
+@media (prefers-reduced-motion: reduce) {
+    .card-menu {
+        transition: none;
+    }
+    
+    nav ul li:hover {
+        transform: none;
+    }
+}
+
+/* ===== ORIENTACIÓN HORIZONTAL EN MÓVILES ===== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .espacio {
+        height: 15vh;
+    }
+    
+    #bar {
+        height: 25vh;
+    }
+    
+    header {
+        padding: 4px 0;
+    }
+}
