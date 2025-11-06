@@ -1,0 +1,31 @@
+body{
+    background-image: url('https://hostingplus.ar/wp-content/uploads/2021/11/editor_codigo.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #000;
+}
+
+.app-container {
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+.cover-header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

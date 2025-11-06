@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+.header{
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#title-principal{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 auto 1rem auto;
+    letter-spacing: 0.05em;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    line-height: 1.2;
+    max-width: 90%;
+}
+
+#subtitle-principal{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ff00;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+    line-height: 1.2;
+    max-width: 90%;
+}
+
+.blinking-cursor {
+    color: #00ff00;
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+.btn{
+    color: #000;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #00ff00;
+    padding: 12px 24px; 
+    border: 1px solid #000;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    background-color: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+
+@keyframes blink {
+    from, to { opacity: 1 }
+    50% { opacity: 0 }
+}
+
