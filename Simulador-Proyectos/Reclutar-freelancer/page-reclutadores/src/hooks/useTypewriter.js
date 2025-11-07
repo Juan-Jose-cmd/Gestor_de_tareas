@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 export const useTypewriter = (text, speed = 50, delay = 0) => {
     const [displayedText, setDisplayedText] = useState('')
     const [currentIndex, setCurrentIndex] = useState(0)
-    const [isTyping, setIsTyping] = useState(false) // Cambiado a false inicialmente
+    const [isTyping, setIsTyping] = useState(false) 
 
     useEffect(() => {
         let timer
