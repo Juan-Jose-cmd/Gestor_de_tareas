@@ -1,0 +1,309 @@
+body{
+    background-color: #ddd;
+}
+
+/*Clases para js*/
+
+.oculto {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/*Encabezado*/
+
+header{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #bbb;
+}
+
+.logo{
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.laboratorio{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo p{
+    background-color: #333;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+/*presentacion*/
+
+#presentacion{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #bbb;
+    width: max-content;
+    padding: 0 20vw;
+    margin: 40px auto;
+    border: 1px solid #000;
+    border-radius: 40px;
+    box-shadow: 2px 5px 5px 5px #999;
+}
+
+.btnpres{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 1px 0px #fff;
+    border: 1px solid #fff;
+    transition: all .3s ease-in-out;
+}
+
+.btnpres:hover{
+    transform: scale(1.1);
+    background-color: #6f6;
+    box-shadow: 5px 5px 1px 0px #6f6;
+    color: #000;
+}
+
+/*Ingreso de datos*/
+
+#ingresarDatos {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ingresarDatos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111;
+}
+
+input[type="text"], input[type="number"] {
+    height: 35px;
+    border: 2px solid #555;
+    background-color: #fff;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 1rem;
+    transition: border .3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #0099ff;
+    outline: none;
+}
+
+input {
+    transition: background-color .3s ease, border .3s ease, color .3s ease;
+}
+
+input[type="text"]:disabled,
+input[type="number"]:disabled {
+    background-color: #999 !important;
+    border: 2px solid #999 !important;
+    color: #999 !important;
+    cursor: not-allowed;
+}
+
+.porcentajeContainer{
+    display: flex;
+    margin: 3rem auto;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 2px 20px 2px;
+
+}
+
+.barraDePorcentaje{
+    height: 2rem;
+    border-radius: 8px;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.barraDePorcentaje > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.barraDePorcentaje1, .barraDePorcentaje2, .barraDePorcentaje3, .barraDePorcentaje4{
+    height: 100%;
+    border-radius: 8px;
+    transition: width .4s ease;
+}
+
+.barraDePorcentaje1{
+    background-color: rgba(230, 38, 38, 0.808);
+}
+.barraDePorcentaje2{
+    background-color: rgba(21, 230, 21, 0.842);
+}
+.barraDePorcentaje3{
+    background-color: rgba(29, 29, 211, 0.822);
+}
+.barraDePorcentaje4{
+    background-color: rgba(223, 223, 23, 0.822);
+}
+
+button.enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: #0099ff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background .3s, transform .2s;
+}
+
+button.enviar:hover {
+    background-color: #007acc;
+    transform: scale(1.03);
+}
+
+/*Mostra ensayos*/
+
+#mostrarEnsayos {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cardEnsayo {
+    border: 2px solid #000;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    background-color: #eee;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+.cardEnsayo h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/*Pedir ensayos*/
+
+#pedirEnsayo {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+}
+
+#pedirEnsayo h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+}
+
+#formSolicitud .grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#formSolicitud label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#formSolicitud input,
+#formSolicitud select,
+#formSolicitud textarea {
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color .3s;
+}
+
+#formSolicitud input:focus,
+#formSolicitud select:focus,
+#formSolicitud textarea:focus {
+    border-color: #0099ff;
+    outline: none;
+}
+
+.btnForm {
+    width: 100%;
+    padding: 12px;
+    background-color: #0099ff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background .3s, transform .2s;
+}
+
+.btnForm:hover {
+    background-color: #007acc;
+    transform: scale(1.03);
+}
+
